@@ -1,3 +1,3 @@
-## NWCUF's WordPress Theme
+## Herndon Elementary PTA's WordPress Theme
 
-&copy; 2016 NWCUF. All rights reserved.
+&copy; 2017 Giraph Creative. All rights reserved.
