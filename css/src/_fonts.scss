@@ -1,19 +1,102 @@
 
-
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,400italic,700italic);
-
-@mixin font {
-	font-family: Lato, sans-serif;
-	font-weight: 300;
+@font-face {
+  font-family: 'TheSans Light';
+  src: url('fonts/thesans-light.eot');
+  src: url('fonts/thesans-light.woff') format('woff'),
+       url('fonts/thesans-light.ttf') format('truetype'),
+       url('fonts/thesans-light.svg#TheSans-Light') format('svg'),
+       url('fonts/thesans-light.woff2') format('woff2'),
+       url('fonts/thesans-light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@mixin font-medium {
-	font-family: Lato, sans-serif;
-	font-weight: 500;
+@font-face {
+  font-family: 'TheSans Light Italic';
+  src: url('fonts/thesans-light-italic.eot');
+  src: url('fonts/thesans-light-italic.woff') format('woff'),
+       url('fonts/thesans-light-italic.ttf') format('truetype'),
+       url('fonts/thesans-light-italic.svg#TheSans-B3LightItalic') format('svg'),
+       url('fonts/thesans-light-italic.woff2') format('woff2'),
+       url('fonts/thesans-light-italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'TheSans';
+	src: url('fonts/thesans.eot');
+	src: url('fonts/thesans.woff') format('woff'),
+		url('fonts/thesans.ttf') format('truetype'),
+		url('fonts/thesans.svg#TheSans-Regular') format('svg'),
+		url('fonts/thesans.woff2') format('woff2'),
+		url('fonts/thesans.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TheSans Italic';
+	src: url('fonts/thesans-italic.eot');
+	src: url('fonts/thesans-italic.woff') format('woff'),
+		url('fonts/thesans-italic.ttf') format('truetype'),
+		url('fonts/thesans-italic.svg#TheSans-RegularItalic') format('svg'),
+		url('fonts/thesans-italic.woff2') format('woff2'),
+		url('fonts/thesans-italic.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TheSans Bold';
+	src: url('fonts/thesans-bold.eot');
+	src: url('fonts/thesans-bold.woff') format('woff'),
+		url('fonts/thesans-bold.ttf') format('truetype'),
+		url('fonts/thesans-bold.svg#TheSans-B7Bold') format('svg'),
+		url('fonts/thesans-bold.woff2') format('woff2'),
+		url('fonts/thesans-bold.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TheSans Bold Italic';
+	src: url('fonts/thesans-bold-italic.eot');
+	src: url('fonts/thesans-bold-italic.woff') format('woff'),
+		url('fonts/thesans-bold-italic.ttf') format('truetype'),
+		url('fonts/thesans-bold-italic.svg#TheSans-B7BoldItalic') format('svg'),
+		url('fonts/thesans-bold-italic.woff2') format('woff2'),
+		url('fonts/thesans-bold-italic.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@mixin font-light {
+	font-family: "TheSans Light", "Open Sans", sans-serif;
+}
+
+@mixin font-light-italic {
+	font-family: "TheSans Light Italic", "Open Sans", sans-serif;
+}
+
+@mixin font-regular {
+	font-family: "TheSans", "Open Sans", sans-serif;
+}
+
+@mixin font-regular-italic {
+	font-family: "TheSans Italic", "Open Sans", sans-serif;
 }
 
 @mixin font-bold {
-	font-family: Lato, sans-serif;
-	font-weight: 700;
+	font-family: "TheSans Bold", "Open Sans", sans-serif;
 }
 
+@mixin font-bold-italic {
+	font-family: "TheSans Bold Italic", "Open Sans", sans-serif;
+}
+
+@mixin font {
+	@include font-light;
+}

@@ -59,6 +59,29 @@ function page_metaboxes( $meta_boxes ) {
         'preview_size' => array( 200, 100 )
     ) );
 
+
+    // showcase metabox
+    $title_metabox = new_cmb2_box( array(
+        'id' => 'title_metabox',
+        'title' => 'Large Title',
+        'object_types' => array( 'page', 'person' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $title_metabox->add_field( array(
+        'name' => 'Title',
+        'id'   => CMB_PREFIX . 'large-title',
+        'type' => 'text',
+    ) );
+
+    $title_metabox->add_field( array(
+        'name' => 'Icon',
+        'id'   => CMB_PREFIX . 'large-title-icon',
+        'type' => 'file',
+        'preview_size' => array( 30, 30 )
+    ) );
+
 }
 add_filter( 'cmb2_init', 'page_metaboxes' );
 

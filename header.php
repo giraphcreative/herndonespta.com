@@ -30,14 +30,8 @@
 				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
 			</a>
 		</div>
-		
-		<div class="nwcua-logo">
-			<a href="http://www.nwcua.org/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo-nwcua.png"></a>
-		</div>
 
-		<div class="search">
-			<?php get_search_form(); ?>
-		</div>
+		<a class="spanish" href="https://translate.google.com/translate?sl=en&tl=es&js=y&prev=_t&hl=en&ie=UTF-8&u=<?php print urlencode( get_the_permalink() ) ?>&edit-text=&act=url">Spanish</a>
 
 	</div>
 

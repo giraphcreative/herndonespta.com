@@ -4,8 +4,11 @@ $icon-width: 70px;
 
 
 .home-sections {
+	padding: 20px;
+	@include clearfix;
+
 	@include respond-to( 1024px ) {
-		padding: 0 30px;
+		padding: 20px 0;
 	}
 
 	section {
@@ -26,6 +29,11 @@ $icon-width: 70px;
 	img {
 		width: 100%;
 		display: block;
+	}
+
+	p {
+		font-size: 1.1em;
+		text-align: center;
 	}
 }
 

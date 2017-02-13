@@ -8,8 +8,9 @@ $orange: #FCB416;
 $lime: #83A53E;
 $forest: #6E8E5F;
 $green: #73A341;
-$grey: #9C9FA0;
-$grey-dark: darken( $grey, 30% );
+$grey: #808285;
+$grey-dark: darken( $grey, 20% );
+$red: #ed2024;
 
 // link color
 $link-color: $teal;
@@ -39,8 +40,6 @@ $link-color: $teal;
 @import "title";
 @import "showcase";
 @import "content";
-@import "accordion";
-@import "matchup";
 
 
 // sidebar styles
@@ -53,11 +52,6 @@ $link-color: $teal;
 
 // home-specific styles
 @import "home";
-
-
-// partner styles
-@import "partners";
-
 
 
 // include magnific popup styles

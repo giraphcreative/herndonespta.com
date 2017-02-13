@@ -3,23 +3,26 @@
 
 function the_large_title() {
 
-	// get the slides
-	if ( has_cmb_value( 'large-title' ) ) {
-		?>
-		<div class="large-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
-			<div class="wrap">
-				<?php if ( has_cmb_value( 'large-title-icon' ) ) { ?>
-				<div class="large-title-icon bg-<?php show_cmb_value( 'large-title-color' ) ?>">
-					<img src="<?php show_cmb_value( 'large-title-icon' ) ?>">
-				</div>
-				<?php } ?>
-				<div class="large-title-text">
-					<h1><?php show_cmb_value( 'large-title' ) ?></h1>
-				</div>
+	?>
+	<div class="wrap">
+		<div class="large-title">
+			<?php if ( has_cmb_value( 'large-title-icon' ) ) { ?>
+			<div class="large-title-icon">
+				<img src="<?php show_cmb_value( 'large-title-icon' ) ?>">
+			</div>
+			<?php } ?>
+			<div class="large-title-text">
+				<h1><?php 
+				if ( has_cmb_value( 'large-title' ) ) {
+					show_cmb_value( 'large-title' );
+				} else {
+					the_title();
+				}
+				?></h1>
 			</div>
 		</div>
-		<?php
-	}
+	</div>
+	<?php
 	
 }
 
