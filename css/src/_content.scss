@@ -1,7 +1,7 @@
 
 
 .wrap {
-	max-width: 1220px;
+	max-width: 1180px;
 	margin: 0 auto;
 }
 
@@ -25,8 +25,8 @@
 	@extend .content-style;
 	padding: 40px 20px;
 
-	@include respond-to( 1024px ) {
-		padding: 40px;
+	@include respond-to( 1220px ) {
+		padding: 40px 0;
 	}
 	
 	&.home iframe:first-child {
@@ -163,19 +163,22 @@ table {
 
 	
 	img, .wp-caption {
-		&.alignleft {
-			float: left;
-			margin: 0 10px 10px 0;
-		}
 
-		&.alignright {
-			float: right;
-			margin: 0 0 10px 10px;
-		}
-		
-		&.aligncenter {
-			display: block;
-			margin: 0 auto;
+		@include respond-to( 600px ) {
+			&.alignleft {
+				float: left;
+				margin: 0 10px 10px 0;
+			}
+
+			&.alignright {
+				float: right;
+				margin: 0 0 10px 10px;
+			}
+			
+			&.aligncenter {
+				display: block;
+				margin: 0 auto;
+			}
 		}
 	}
 
