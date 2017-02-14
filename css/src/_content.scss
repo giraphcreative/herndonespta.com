@@ -161,7 +161,6 @@ table {
 		@include clearfix;
 	}
 
-	
 	img, .wp-caption {
 
 		@include respond-to( 600px ) {
@@ -220,5 +219,26 @@ table {
 	input[type=text] {
 		@include field-styles
 	}
+
+	button, input[type=submit], input[type=button], .fasc-button {
+		@include font;
+		display: inline-block;
+		padding: 9px 20px 6px;
+		max-width: 100%;
+		font-size: 20px !important;
+		background: $red;
+		border: 0;
+		color: white;
+		text-transform: uppercase;
+		border-radius: 10px;
+		transition: 300ms opacity ease-in-out;
+		opacity: 1;
+		cursor: pointer;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
 }
 
