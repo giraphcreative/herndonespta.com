@@ -5,23 +5,26 @@
 
 get_header();
 
+	
+
 ?>
-	<div id="primary" class="site-content">
+	<?php 
+	if ( have_posts() ) :
+		while ( have_posts() ) : the_post(); 
+	?>
 
-		<div id="content" class="site-content content-narrow" role="main">
-		<?php 
-		if ( have_posts() ) :
-			while ( have_posts() ) : the_post(); 
-				?>
-				<h1><?php the_title(); ?></h1>
-				<?php
-				the_content();
-			endwhile;
-		endif;
-		 ?>
-		</div><!-- #content -->
+	<?php the_large_title(); ?>
 
-	</div><!-- #primary -->
+	<div id="content" class="wrap group content-narrow" role="main">
+		<?php the_content(); ?>
+		<hr>
+		<p class="quiet">Posted by <?php print get_the_author_link() ?> in <?php print get_the_category_list( ', ' ) ?>.</p>
+	</div><!-- #content -->
+	<?php
+		endwhile;
+	endif;
+	?>
+
 <?php
 
 get_footer();
