@@ -2,6 +2,10 @@
 .cu-branding {
 	border-top: 3px solid $red;
 	padding: 30px 20px;
+	
+	@include respond-to( 768px ) {
+		padding: 30px;
+	}
 
 	@include respond-to( 1024px ) {
 		padding: 30px 0;
@@ -56,6 +60,20 @@ footer {
 	.column {
 		padding: 15px 20px;
 
+		@include respond-to( 768px ) {
+			float: left;
+			padding: 0 30px;
+			width: 20%;
+
+			&:nth-child(2) {
+				border-right: 4px solid white;
+			}
+
+			&:first-child {
+				width: 40%;
+			}
+		}
+
 		@include respond-to( 1024px ) {
 			padding: 0 40px;
 		}
@@ -72,20 +90,6 @@ footer {
 
 		&:nth-child(3) {
 			padding-top: 0;
-		}
-
-		@include respond-to( 768px ) {
-			padding: 0 20px;
-			float: left;
-			width: 20%;
-
-			&:nth-child(2) {
-				border-right: 4px solid white;
-			}
-
-			&:first-child {
-				width: 40%;
-			}
 		}
 	}
 
