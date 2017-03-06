@@ -15,14 +15,14 @@ get_header(); ?>
 				<?php
 			} else {
 				?>
-				<h1>eNews</span></h1>
+				<h1>News</span></h1>
 				<?php
 			}
 			?>
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="primary" class="wrap group content-wide blog" role="main">
 		
 		<?php
