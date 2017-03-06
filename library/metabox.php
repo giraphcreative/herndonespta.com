@@ -11,6 +11,22 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // showcase metabox
+    $left_metabox = new_cmb2_box( array(
+        'id' => 'left_metabox',
+        'title' => 'Left Column',
+        'object_types' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $left_metabox->add_field( array(
+        'name' => 'Content',
+        'id'   => CMB_PREFIX . 'left-column',
+        'type' => 'wysiwyg',
+    ) );
+
+
+    // showcase metabox
     $showcase_metabox = new_cmb2_box( array(
         'id' => 'showcase_metabox',
         'title' => 'Showcase',
@@ -64,7 +80,7 @@ function page_metaboxes( $meta_boxes ) {
     $title_metabox = new_cmb2_box( array(
         'id' => 'title_metabox',
         'title' => 'Large Title',
-        'object_types' => array( 'page', 'person' ), // post type
+        'object_types' => array( 'page' ), // post type
         'context' => 'normal',
         'priority' => 'high',
     ));

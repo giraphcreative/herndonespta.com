@@ -5,16 +5,25 @@ Home/catch-all template
 
 get_header(); ?>
 
+	<?php 
+	if ( is_search() ) {
+		?>
+	<div class="wrap">
+		<div class="large-title">
+			<div class="large-title-text">
+				<h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1>
+			</div>
+		</div>
+	</div>
+		<?php
+	} else {
+		the_large_title();
+	}
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
-			<div class="content-narrow">
+	?>
+	<div id="primary" class="wrap group content-wide" role="main">
+			
 			<?php
-			if ( is_search() ) {
-				?><h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><?php
-			}
-
 			while ( have_posts() ) : the_post();
 				?>
 				<hr>
@@ -23,7 +32,6 @@ get_header(); ?>
 				<?php
 			endwhile;
 			?>
-			</div>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
