@@ -9,50 +9,46 @@
  * @since Twenty Fourteen 1.0
  */
 
-get_header(); ?>
+get_header(); 
 
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+?>
 
-			<?php if ( have_posts() ) : ?>
+	<div class="wrap">
+		<div class="large-title">
+			<div class="large-title-text">
+				<h1><?php single_cat_title(); ?></span></h1>
+			</div>
+		</div>
+	</div>
+	
+	<section id="primary" class="wrap group content-wide blog" role="main">
 
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
-
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .archive-header -->
-
-			<?php
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
-
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-
-					endwhile;
-					// Previous/next page navigation.
-					twentyfourteen_paging_nav();
-
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
-
-				endif;
+	<?php if ( have_posts() ) : ?>
+	<?php
+	
+		// Start the Loop.
+		while ( have_posts() ) : the_post(); 
 			?>
-		</div><!-- #content -->
+		<div class="entry">
+			<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+			<?php the_excerpt(); ?>
+			<p class="quiet">Posted by <?php the_author_link() ?> in <?php print get_the_category_list( ', ', '', get_the_ID() ) ?> <span>on <?php the_date() ?></span></p>
+		</div>
+			<?php
+		endwhile;
+
+	else :
+		// If no content, include the "No posts found" template.
+		get_template_part( 'content', 'none' );
+
+	endif;
+	?>
+
 	</section><!-- #primary -->
 
+
 <?php
-get_sidebar( 'content' );
-get_sidebar();
+
 get_footer();
+
+?>
