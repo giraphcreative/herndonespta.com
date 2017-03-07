@@ -11,22 +11,6 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // showcase metabox
-    $left_metabox = new_cmb2_box( array(
-        'id' => 'left_metabox',
-        'title' => 'Left Column',
-        'object_types' => array( 'page' ), // post type
-        'context' => 'normal',
-        'priority' => 'high',
-    ));
-
-    $left_metabox->add_field( array(
-        'name' => 'Content',
-        'id'   => CMB_PREFIX . 'left-column',
-        'type' => 'wysiwyg',
-    ) );
-
-
-    // showcase metabox
     $showcase_metabox = new_cmb2_box( array(
         'id' => 'showcase_metabox',
         'title' => 'Showcase',
@@ -97,6 +81,25 @@ function page_metaboxes( $meta_boxes ) {
         'type' => 'file',
         'preview_size' => array( 30, 30 )
     ) );
+
+
+    // left metabox
+    $left_metabox = new_cmb2_box( array(
+        'id' => 'left_metabox',
+        'title' => 'Left Column',
+        'object_types' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $left_metabox->add_field( array(
+        'name' => 'Content',
+        'id'   => CMB_PREFIX . 'left-column',
+        'type' => 'wysiwyg',
+    ) );
+
+
+
 
 }
 add_filter( 'cmb2_init', 'page_metaboxes' );
