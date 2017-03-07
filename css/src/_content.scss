@@ -71,6 +71,13 @@
 	}
 
 	.partner {
+		opacity: .8;
+		transition: 300ms opacity ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+
 		@include respond-to( 600px ) {
 			width: 50%;
 		}
