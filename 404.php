@@ -11,8 +11,6 @@ get_header(); ?>
 
 			<h1 class="page-title"><?php _e( 'Not Found', 'twentyfourteen' ); ?></h1>
 
-			<p>Looking for the scholarships page? <a href="https://nwcuf.org/scholarships-and-grants">Click here</a>.</p>
-
 			<p>If not, feel free to try searching for what you need below.</p>
 
 			<p class="search-form"><?php print get_search_form(); ?></p>
