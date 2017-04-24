@@ -33,7 +33,7 @@ get_header();
 			</section>
 
 			<section>
-				<a href="/activities"><img src="<?php bloginfo('template_url') ?>/img/home-activities.png"></a>
+				<a href="/clubs"><img src="<?php bloginfo('template_url') ?>/img/home-activities.png"></a>
 				<p><strong>Activities &amp; Clubs</strong><br>
 					Register here</p>
 			</section>
@@ -42,6 +42,10 @@ get_header();
 	
 	</div>
 
+	<div class="content-wide cu-branding wrap">
+		<img src="<?php bloginfo( 'template_url' ); ?>/img/logo-cu.png" class="alignright" />
+		<h3 class="text-center">This website is sponsored by our community partner, <span>Fairfax County Federal Credit Union</span></h3>
+	</div>
 
 <?php 
 
