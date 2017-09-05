@@ -3,7 +3,8 @@
 
 function the_large_title() {
 
-	?>
+	if ( has_cmb_value( 'large-title' ) ) {
+		?>
 	<div class="wrap">
 		<div class="large-title">
 			<?php if ( has_cmb_value( 'large-title-icon' ) ) { ?>
@@ -13,17 +14,13 @@ function the_large_title() {
 			<?php } ?>
 			<div class="large-title-text">
 				<h1><?php 
-				if ( has_cmb_value( 'large-title' ) ) {
 					show_cmb_value( 'large-title' );
-				} else {
-					the_title();
-				}
 				?></h1>
 			</div>
 		</div>
 	</div>
-	<?php
-	
+		<?php
+	}	
 }
 
 
