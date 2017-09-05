@@ -10,7 +10,7 @@ get_header();
 
 	<hr>
 
-	<div class="text-center">
+	<div class="text-center" style="padding: 20px;">
 		<img src="<?php bloginfo('template_url') ?>/img/stripe.png" />
 		<p>This website is secured by Comodo and all communication is encrypted.</p>
 	</div>
