@@ -39,6 +39,7 @@
 			<div class="column social">
 				<a href="https://twitter.com/herndonespta" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-twitter.png"></a>
 				<a href="https://www.facebook.com/HERNDONESPTA/" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-facebook.png"></a>
+				<a href="https://www.instagram.com/herndonespta/" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-instagram.png"></a>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
