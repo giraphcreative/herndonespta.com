@@ -18,7 +18,7 @@
 				<p><strong>HERNDON ELEMENTARY PTA</strong><br>
 					630 Dranesville Rd.<br>
 					Herndon, VA 20170<br>
-					703-593-1607</p>
+					703-326-3100</p>
 			</div>
 			<div class="column">
 				<nav role="navigation">
