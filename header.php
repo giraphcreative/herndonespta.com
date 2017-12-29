@@ -18,6 +18,16 @@
 <?php wp_head(); ?>
 <link href="<?php bloginfo( "template_url" ) ?>/css/main.css" rel="stylesheet" type="text/css">
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111644236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111644236-1');
+</script>
+
 </head>
 <body <?php body_class(); ?>>
 
