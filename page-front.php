@@ -44,7 +44,7 @@ get_header();
 
 	<div class="content-wide cu-branding wrap">
 		<img src="<?php bloginfo( 'template_url' ); ?>/img/logo-cu.png" class="alignright" />
-		<h3 class="text-center">This website is sponsored by our community partner, <span>Fairfax County Federal Credit Union</span></h3>
+		<h3 class="text-center">This website is sponsored by our community partner, <span>Next Mark Credit Union</span></h3>
 	</div>
 
 <?php 
